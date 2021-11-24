@@ -41,7 +41,6 @@ import { ViolationRunComponent } from './violation-run/violation-run.component';
 import { ViolationCollectionComponent } from './violation-collection/violation-collection.component';
 import { ViolationExpungeComponent } from './violation-expunge/violation-expunge.component';
 import { ReportNoticeComponent } from './report-notice/report-notice.component';
-import { MetricsComponent } from './report-report-admin/metrics/metrics.component';
 import { ReportReportBusinessComponent } from './report-report-business/report-report-business.component';
 import { ReportReportFinanceComponent } from './report-report-finance/report-report-finance.component';
 import { ReportReportPropertyComponent } from './report-report-property/report-report-property.component';
@@ -78,7 +77,9 @@ import { SetupBusinessFeeComponent } from './setup-business-fee/setup-business-f
 import { SetupBusinessFormComponent } from './setup-business-form/setup-business-form.component';
 import { SetupBusinessTaskComponent } from './setup-business-task/setup-business-task.component';
 import { SetupBusinessWorkComponent } from './setup-business-work/setup-business-work.component';
-import { SetupDataComponent } from './setup-data/setup-data.component'
+import { SetupDataComponent } from './setup-data/setup-data.component';
+import { ReportAuditComponent } from './report-audit/report-audit.component';
+import { ReportReportAdminComponent } from './report-report-admin/report-report-admin.component'
 
 @NgModule({
   declarations: [
@@ -116,7 +117,6 @@ import { SetupDataComponent } from './setup-data/setup-data.component'
     ViolationCollectionComponent,
     ViolationExpungeComponent,
     ReportNoticeComponent,
-    MetricsComponent,
     ReportReportBusinessComponent,
     ReportReportFinanceComponent,
     ReportReportPropertyComponent,
@@ -153,7 +153,9 @@ import { SetupDataComponent } from './setup-data/setup-data.component'
     SetupBusinessFormComponent,
     SetupBusinessTaskComponent,
     SetupBusinessWorkComponent,
-    SetupDataComponent
+    SetupDataComponent,
+    ReportAuditComponent,
+    ReportReportAdminComponent
   ],
   imports: [
     BrowserModule,
