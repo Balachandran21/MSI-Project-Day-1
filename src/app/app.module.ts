@@ -40,8 +40,6 @@ import { ViolationBulkGeneralComponent } from './violation-bulk-general/violatio
 import { ViolationRunComponent } from './violation-run/violation-run.component';
 import { ViolationCollectionComponent } from './violation-collection/violation-collection.component';
 import { ViolationExpungeComponent } from './violation-expunge/violation-expunge.component';
-import { TowComponent } from './boot/tow/tow.component';
-import { PaymentComponent } from './payment/payment.component';
 import { ReportNoticeComponent } from './report-notice/report-notice.component';
 import { MetricsComponent } from './report-report-admin/metrics/metrics.component';
 import { ReportReportBusinessComponent } from './report-report-business/report-report-business.component';
@@ -55,7 +53,6 @@ import { ReportReportPrintComponent } from './report-report-print/report-report-
 import { ReportReportPostComponent } from './report-report-post/report-report-post.component';
 import { ReportReportHistoryComponent } from './report-report-history/report-report-history.component';
 import { SetupUserRoleComponent } from './setup-user-role/setup-user-role.component';
-import { SetupSystemComponent } from './setup-system/setup-system.component';
 import { SetupUserSystemComponent } from './setup-user-system/setup-user-system.component';
 import { SetupPropertyContractorComponent } from './setup-property-contractor/setup-property-contractor.component';
 import { SetupPropertyDataComponent } from './setup-property-data/setup-property-data.component';
@@ -118,8 +115,6 @@ import { SetupDataComponent } from './setup-data/setup-data.component'
     ViolationRunComponent,
     ViolationCollectionComponent,
     ViolationExpungeComponent,
-    TowComponent,
-    PaymentComponent,
     ReportNoticeComponent,
     MetricsComponent,
     ReportReportBusinessComponent,
@@ -133,7 +128,6 @@ import { SetupDataComponent } from './setup-data/setup-data.component'
     ReportReportPostComponent,
     ReportReportHistoryComponent,
     SetupUserRoleComponent,
-    SetupSystemComponent,
     SetupUserSystemComponent,
     SetupPropertyContractorComponent,
     SetupPropertyDataComponent,
