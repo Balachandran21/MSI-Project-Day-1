@@ -1,0 +1,193 @@
+#fieldset
+{
+    background-color: whitesmoke;
+    width: 40%;
+    border: 1px black solid;
+    margin-left: 70px;
+}
+.owner_first_name
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.owner_last_name
+{
+    float: right;
+    margin-right: 10px;
+}
+.owner_company_name
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.pin
+{
+    float: right;
+    margin-right: 10px;
+}
+.street_number
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.street_name
+{
+    float: right;
+    margin-right: 10px;
+}
+.unit
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.city
+{
+    float: right;
+    margin-right: 10px;
+}
+.new_property
+{
+    background-color: blue;
+    margin: 20px;
+    color: skyblue;
+    float: left;
+}
+.search
+{
+    background-color: blue;
+    color: white;
+    height: min-content;
+    margin-top: 20px;
+    margin-left: 40px;
+    float: left;
+}
+.clear
+{
+    background-color: grey;
+    color: white;
+    height: min-content;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.fieldset1
+{
+    display: block;
+    background-color: skyblue;
+    width: 40%;
+    border: 1px black solid;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+table tr th
+{
+    background-color: cadetblue;
+    width: 40%;
+    padding-left: 40px;
+    padding-right: 35px;
+    border: 1px solid black;
+}
+.table_data
+{
+    margin-left: 70px;
+    width: 40%;
+}
+.fieldset2
+{
+    display: block;
+    width: 70%;
+    float: left;
+    margin-left: 200px;
+    margin-bottom: 30px;
+    margin-top: -100px;
+    float: left;
+}
+.fieldset3
+{
+    margin-bottom: 200px;
+    float: right;
+    width: 35%;
+    margin-top: -100px;
+    margin-left: 90px;
+}
+.property-views
+{
+    border: 1px solid black;
+    background-color: lightslategrey;
+    width: 100%;
+}
+ul li 
+{
+    list-style-type: none;
+}
+ul li a 
+{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+}
+hr
+{
+    width: 350px;
+    color: black;
+}
+.permits
+{
+    margin-top: 14px;
+}
+.heading
+{
+    margin-left: 70px;
+}
+.heading
+{
+    background-color: navy;
+    color: oldlace;
+}
+
+.heading1{
+    margin-left: 70px;
+}
+.fieldset3
+{
+    margin-top: -120px;
+    margin: 70px;
+    position: relative;
+}
+
+.table
+{
+    overflow-y: scroll;
+    float: left;
+}
+.scrollbar
+{
+    overflow-y: scroll;
+}
+.result
+{
+    margin-top: 5px;
+}
+.property
+{
+    margin-top: -500px;
+    position: static;
+}
+
+.table th
+{
+    position: sticky;
+}
+.fieldset3
+{
+    margin-top: 88px;
+    margin-right: -10px;
+    display: block;
+    position: static;
+    width: 40%;
+    margin-right: 70px;
+}

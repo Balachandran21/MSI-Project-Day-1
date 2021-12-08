@@ -1,1 +1,113 @@
-<p>property-search-property works!</p>
+<h2 class="heading1">Search Properties</h2>
+<form>
+    <fieldset id="fieldset">
+        <div class="owner_first_name">
+            <p>
+                <label for="owner_first_name">Owner First Name</label><br>
+                <input type="text" name="owner_first_name" id="owner_first_name">
+            </p>
+        </div>
+        <div class="owner_last_name">
+            <p>
+                <label for="owner_last_name">Owner Last Name</label><br>
+                <input type="text" name="owner_last_name" id="owner_last_name">
+            </p>
+        </div>
+        <div class="owner_company_name">
+            <p>
+                <label for="owner_company_name">Owner Company Name</label><br>
+                <input type="text" [(ngModel)]='name' name="owner_company_name" id="owner_company_name">
+            </p>
+        </div>
+        <div class="pin">
+            <p>
+                <label for="pin">PIN</label><br>
+                <input type="text" name="pin" id="pin">
+            </p>
+        </div>
+        <div class="street_number">
+            <p>
+                <label for="street_number" ng >Street Number</label><br>
+                <input type="text" [(ngModel)]='address' name="street_number" id="street_number">
+            </p>
+        </div>
+        <div class="street_name">
+            <p>
+                <label for="street_name">Street Name</label><br>
+                <input type="text" name="street_name" id="street_name">
+            </p>
+        </div>
+        <div class="unit">
+            <p>
+                <label for="unit">Unit/Apt</label><br>
+                <input type="text" [(ngModel)]='unit' name="unit" id="unit">
+            </p>
+        </div>
+        <div class="city"> 
+            <p>
+                <label for="city">City/Village</label><br>
+                <input type="text" [(ngModel)]='city' name="city" id="city">
+            </p>
+        </div>
+    </fieldset>
+</form>
+<fieldset class="fieldset1">
+    <div class="add-new-property">
+        <a href="#"><button class="new_property" mat-button>Add New Property</button></a>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="onSearch()">Search</button>
+        <button type="button" class="btn btn-primary" (click)="onClear()">Clear</button>
+    </div>
+</fieldset>
+<br>
+<br>
+<div class="fieldset3">
+    <div class="property">
+    <fieldset>
+        <h2 id="res">360 Property View</h2>
+        <div class="property-views">
+            <ul>
+                <li class="permits"><a href="#">Permits</a></li>
+                <hr>
+                <li><a href="#">Service Requests</a></li>
+                <hr>
+                <li><a href="#">Inspections</a></li>
+                <hr>
+                <li><a href="#">Violations</a></li>
+                <hr>
+                <li><a href="#">Invoices</a></li>
+                <hr>
+                <li><a href="#">Business Licenses</a></li>
+            </ul>
+        </div>
+    </fieldset>
+    </div>
+    </div>
+<div class="fieldset2">
+    <h4 class="result" id="bala-"><b>Search Results</b></h4>
+    <div class="scrollbar">
+        <table class="table" id="scrollbar" border="2" aria-rowspan="10">
+            <thead>
+                <tr class="heading" id="heading">
+                    <th>Address</th>
+                    <th>Unit</th>
+                    <th>City</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let element of OwnerData|filter:SearchAddress:'address'|filter:SearchUnit:'unit'|filter:SearchCity:'city'|filter:SearchName:'name'">
+                    <td>{{element.address}} </td>
+                    <td>{{element.unit}}</td>
+                    <td>{{element.city}}</td>
+                    <td>{{element.name}}</td>
+                </tr>
+           </tbody>
+        </table>
+    </div>
+
+
+    <!-- <mat-paginator [pageSizeOptions]="[5,10,15,20,25,30,35,40,45]" showFirstLastButtons></mat-paginator>    -->
+
+<!-- <a href="#" routerLink="testing" routerLinkActive="active">Testing</a> -->

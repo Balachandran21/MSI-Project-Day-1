@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PeopleSearchServiceComponent } from './people-search-service/people-search-service.component';
 import { PeopleNewServiceComponent } from './people-new-service/people-new-service.component';
-import { PropertySearchPropertyComponent } from './property-search-property/property-search-property.component';
 import { PropertySearchPermitComponent } from './property-search-permit/property-search-permit.component';
 import { PropertySearchServiceComponent } from './property-search-service/property-search-service.component';
 import { PropertySearchInspectionComponent } from './property-search-inspection/property-search-inspection.component';
@@ -71,6 +70,7 @@ import { SetupBusinessFormComponent } from './setup-business-form/setup-business
 import { SetupBusinessTaskComponent } from './setup-business-task/setup-business-task.component';
 import { SetupBusinessWorkComponent } from './setup-business-work/setup-business-work.component';
 import { SetupDataComponent } from './setup-data/setup-data.component';
+import { PropertySearchPropertyComponent } from './property-search-property/property-search-property.component';
 
 
 const routes: Routes = [
@@ -79,7 +79,6 @@ const routes: Routes = [
   {path:'property-search-property',component:PropertySearchPropertyComponent},
   {path:'property-search-permit',component:PropertySearchPermitComponent},
   {path:'property-search-service',component:PropertySearchServiceComponent},
-  {path:'property-search-property',component:PropertySearchPropertyComponent},
   {path:'property-search-inspection',component:PropertySearchInspectionComponent},
   {path:'property-search-business',component:PropertySearchBusinessComponent},
   {path:'property-new-property',component:PropertyNewPropertyComponent},

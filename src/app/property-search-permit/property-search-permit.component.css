@@ -1,0 +1,122 @@
+#fieldset
+{
+    background-color: whitesmoke;
+    width: 40%;
+    border: 1px black solid;
+    margin-left: 70px;
+}
+.department
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.permit_type
+{
+    float: right;
+    margin-right: 10px;
+}
+.permit
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.street_number
+{
+    float: right;
+    margin-right: 10px;
+}
+.street_name
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.unit
+{
+    float: right;
+    margin-right: 10px;
+}
+.city
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.status
+{
+    float: right;
+    margin-right: 10px;
+}
+#permit_type
+{
+    font-size: smaller;
+    height: 30px;
+}
+.new_permit
+{
+    background-color: blue;
+    margin: 20px;
+    color: skyblue;
+    float: left;
+}
+.search
+{
+    background-color: blue;
+    color: white;
+    margin-top: 20px;
+    margin-left: 40px;
+    float: left;
+}
+.clear
+{
+    background-color: grey;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.fieldset1
+{
+    position: absolute;
+    background-color: skyblue;
+    width: 40%;
+    border: 1px black solid;
+    margin-left: 70px;
+}
+.fieldset2
+{
+    margin-top: -348px;
+    float: right;
+    width: 35%;
+    margin-right: 70px;
+}
+.service-views
+{
+    border: 1px solid black;
+    background-color: lightslategrey;
+    width: 100%;
+}
+ul li
+{
+    list-style-type: none;
+}
+ul li a 
+{
+    text-decoration: none;
+    color: black;
+    font-size: medium;
+}
+hr
+{
+    width: 350px;
+    color: black;
+}
+.heading
+{
+    margin-left: 70px;
+}
+.service
+{
+    margin-top: 14px;
+}

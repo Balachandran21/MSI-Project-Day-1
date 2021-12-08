@@ -1,11 +1,11 @@
 .mat-toolbar
 {
     background-color:  navy;
+    height: auto;
 }
 .atteson
 {
-    background-color: black;
-    height: 100px;
+    height: auto;
     font-size: small;
 }
 .atteson:hover
@@ -57,6 +57,7 @@
 {
     color: white;
     font-size: small;
+    background-color: black;
 }
 .vehicle
 {
@@ -112,7 +113,7 @@
 {
   display: none;
   position: absolute;
-  background-color: brown;
+  background-color: navy;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -121,7 +122,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -139,7 +140,7 @@
 {
   display: none;
   position: absolute;
-  background-color: brown;
+  background-color: navy;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -148,7 +149,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -166,7 +167,7 @@
 {
   display: none;
   position: absolute;
-  background-color: brown;
+  background-color: navy;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -175,7 +176,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -193,7 +194,7 @@
 {
     display: none;
     position: absolute;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -202,7 +203,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -220,7 +221,7 @@
 {
     display: none;
     position: absolute;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -229,7 +230,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -247,7 +248,7 @@
 {
     display: none;
     position: absolute;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -256,7 +257,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -274,7 +275,7 @@
 {
     display: none;
     position: absolute;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -283,7 +284,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -300,7 +301,7 @@
 .dropdown-content-people-search
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -312,7 +313,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -329,7 +330,7 @@
 .dropdown-content-people-new
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -341,7 +342,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -358,7 +359,7 @@
 .dropdown-content-property-search
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -370,7 +371,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -387,7 +388,7 @@
 .dropdown-content-property-new
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -399,7 +400,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -416,7 +417,7 @@
 .dropdown-content-property-new-inspection
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -428,7 +429,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -445,7 +446,7 @@
 .dropdown-content-vehicle-search
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -457,7 +458,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -474,7 +475,7 @@
 .dropdown-content-vehicle-new
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -486,7 +487,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -503,7 +504,7 @@
 .dropdown-content-violation-search
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -515,7 +516,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -532,7 +533,7 @@
 .dropdown-content-violation-new
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -544,7 +545,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -561,7 +562,7 @@
 .dropdown-content-violation-new
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -573,7 +574,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -590,7 +591,7 @@
 .dropdown-content-violation-bulk_update
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -602,7 +603,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -619,7 +620,7 @@
 .dropdown-content-report-report
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -631,7 +632,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -648,7 +649,7 @@
 .dropdown-content-setup-user
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -660,7 +661,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -677,7 +678,7 @@
 .dropdown-content-setup-property
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -689,7 +690,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -706,7 +707,7 @@
 .dropdown-content-setup-configuration
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -718,7 +719,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -735,7 +736,7 @@
 .dropdown-content-setup-inspection
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -747,7 +748,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -764,7 +765,7 @@
 .dropdown-content-setup-permit
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -776,7 +777,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -793,7 +794,7 @@
 .dropdown-content-setup-violation
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -805,7 +806,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -822,7 +823,7 @@
 .dropdown-content-setup-document
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -834,7 +835,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -851,7 +852,7 @@
 .dropdown-content-setup-exemption
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -863,7 +864,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -880,7 +881,7 @@
 .dropdown-content-setup-business_license 
 {
     display: none;
-    background-color: brown;
+    background-color: navy;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -892,7 +893,7 @@
 {
     font-size: small;
     float: none;
-    color: black;
+    color: white;
     padding: 7px 10px;
     text-decoration: none;
     display: block;
@@ -909,5 +910,13 @@
 .arrow
 {
     float: right;
-    color: lightgreen;
+    color: white;
+}
+.alignment
+{
+    font-size: medium;
+}
+.dropdown-bala
+{
+margin-top: -11px;
 }
