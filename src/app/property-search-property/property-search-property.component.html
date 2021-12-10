@@ -87,7 +87,7 @@
 <div class="fieldset2">
     <h4 class="result" id="bala-"><b>Search Results</b></h4>
     <div class="scrollbar">
-        <table class="table" id="scrollbar" border="2" aria-rowspan="10">
+        <table class="table" id="scrollbar" border="5" aria-rowspan="20">
             <thead>
                 <tr class="heading" id="heading">
                     <th>Address</th>
@@ -97,7 +97,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr *ngFor="let element of OwnerData|filter:SearchAddress:'address'|filter:SearchUnit:'unit'|filter:SearchCity:'city'|filter:SearchName:'name'">
+                <tr class="table-cells" *ngFor="let element of OwnerData|filter:SearchAddress:'address'|filter:SearchUnit:'unit'|filter:SearchCity:'city'|filter:SearchName:'name'">
                     <td>{{element.address}} </td>
                     <td>{{element.unit}}</td>
                     <td>{{element.city}}</td>

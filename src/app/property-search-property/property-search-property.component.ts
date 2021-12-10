@@ -32,7 +32,20 @@ export class PropertySearchPropertyComponent implements OnInit {
   SearchUnit: any;
   SearchName: any;
   SortAddress:any;
-  
+  PermitArray: any;
+  ServiceArray: any;
+  InspectionArray: any;
+  ViolationsArray: any;
+  InvoicesArray: any;
+  BusinessArray: any;
+  permit='';
+  servicea='';
+  inspections='';
+  violations='';
+  invoices='';
+  business='';
+
+
  
 
   constructor(private formbuilder: FormBuilder, private api: ApiService, private search: SearchService) { }
@@ -74,10 +87,10 @@ export class PropertySearchPropertyComponent implements OnInit {
         })
   }
   getAllOwner() {
-    // this.api.getOwner()
-    //   .subscribe((res: any) => {
-    //     this.OwnerData = res;
-    //   })
+    this.api.getOwner()
+     .subscribe((res: any) => {
+         this.OwnerData = res;
+       })
 
   }
   onSearch() {
@@ -85,31 +98,41 @@ export class PropertySearchPropertyComponent implements OnInit {
     this.SearchAddress=this.address;
     this.SearchUnit=this.unit;
     this.SearchName=this.name;
+    this.PermitArray=this.permit;
+    this.ServiceArray=this.service;
+    this.InspectionArray=this.inspections;
+    this.BusinessArray=this.business;
+    this.InvoicesArray=this.invoices;
+    this.ViolationsArray=this.violations;
+  
     var a = {
+      
       "request": [
         {
-        "url": "api/propertyquicksearch",
-        "action": "post",
-        "propertyquicksearch": {
-        "customer": {
-        "useremail": "msi@southholland.org",
-        "screenname": "search",
-        "customerid": "217"
-        },
-        "customerid": "217",
-        "streetnumber": "111",
-        "city": "South Holland"
+            "url": "api/propertyquicksearch",
+            "action": "post",
+            "propertyquicksearch": {
+                "customer": {
+                    "useremail": "msi@southholland.org",
+                    "screenname": "search",
+                    "customerid": "217"
+                },
+                "customerid": "217",
+                "streetnumber": "111",
+                "city": "South Holland"
+            }
         }
-        }
-        ]
+    ]
         }
     console.log("Working");
+    debugger
     this.search.postSearch(a).subscribe(
       (res:any) => {
-        debugger
+      
         console.log(res.results.result[0].json.results);
         this. OwnerData = res.results.result[0].json.results;
       },
+  
       (err: any) => {
         console.log(err);
       }
@@ -125,6 +148,9 @@ export class PropertySearchPropertyComponent implements OnInit {
     //   this.SortDirection='desc';
     // }
   }  
+
+  
+  
   onClear(){
     this.SearchCity='';
     this.city='';
@@ -136,7 +162,6 @@ export class PropertySearchPropertyComponent implements OnInit {
     this.name='';
   }
 }
-
 
 
 

@@ -12,15 +12,15 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  onSearch(){
-    // this.service.postSearch().subscribe(
-    // ()=>{
-    // console.log("Displaying results");
-    // },
-    // (err: any)=>{
-    // console.log(err);
-    // }
-    // );
-    // 
-  }
+  //onSearch(){
+  //  this.service.postSearch().subscribe(
+  //   ()=>{
+  //   console.log("Displaying results");
+  //   },
+  //   (err: any)=>{
+  //   console.log(err);
+  //   }
+  //   );
+     
+  //}
 }
