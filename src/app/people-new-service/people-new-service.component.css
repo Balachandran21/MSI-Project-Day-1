@@ -1,0 +1,22 @@
+fieldset
+{
+    background-color: lightblue;
+    width: 45%;
+}
+.company-name
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}
+.service-provider
+{
+    float: right;
+    margin-right: 10px;
+}
+.address
+{
+    display: block;
+    float: left;
+    margin-left: 10px;
+}

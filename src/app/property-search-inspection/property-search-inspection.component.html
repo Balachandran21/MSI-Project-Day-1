@@ -1,1 +1,80 @@
-<p>property-search-inspection works!</p>
+<h4 class="heading">Search Inspections</h4>
+<form>
+    <fieldset id="fieldset">
+        <div class="department">
+        <p>
+            <label for="department">Department</label><br>
+            <input type="text" name="department" id="department">
+        </p>
+        </div>
+        <div class="inspection_group">
+        <p>
+            <label for="inspection_group">Inspection Group</label><br>
+            <input type="text" name="inspection_group" id="inspection_group">
+        </p>
+        </div>
+        <div class="inspection_type">
+        <p>
+            <label for="inspection_type">Inspection Type</label><br>
+            <input type="text" name="inspection_type" id="inspection_type">
+        </p>
+        </div>
+        <div class="status">
+        <p>
+            <label for="status">Status</label><br>
+            <input type="text" name="status" id="status">
+        </p>
+        </div>
+        <div class="street_number">
+        <p>
+            <label for="street_number">Street Number</label><br>
+            <input type="text" name="street_number" id="street_number">
+        </p>    
+        </div>
+        <div class="street_name">
+        <p>
+            <label for="street_name">Street Name</label><br>
+            <input type="text" name="street_name" id="street_name">
+        </p>
+        </div>
+        <div class="inspection">
+        <p>
+            <label for="inspection">Inspection#</label><br>
+            <input type="text" name="inspection" id="inspection">
+        </p>
+        </div>
+        <div class="inspector">
+        <p>
+            <label for="inspector">Inspector</label><br>
+            <input type="text" name="inspector" id="inspector">
+        </p>    
+        </div>
+    </fieldset>
+    <fieldset class="fieldset1">
+        <div class="add-new-inspection">
+            <a href="#"><button class="new_inspection" mat-button>Add Inspection</button></a>
+        </div>
+            <button mat-button class="search">Search</button>
+            <button mat-button class="clear">Clear</button>
+    </fieldset>
+    <br>
+    <br>
+    <div class="fieldset2">
+        <fieldset>
+            <h4>360 Property View</h4>
+            <div class="business-views">
+            <ul>
+                <li class="permits"><a href="#">Permits</a></li>
+                <hr>
+                <li><a href="#">Service Requests</a></li>
+                <hr>
+                <li><a href="#">Violations</a></li>
+                <hr>
+                <li><a href="#">Invoices</a></li>
+                <hr>
+                <li><a href="#">Business Licenses</a></li>
+            </ul>
+            </div>
+        </fieldset>
+    </div>
+</form>

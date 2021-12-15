@@ -1,1 +1,78 @@
-<p>property-search-business works!</p>
+<h4 class="heading">Search Business License</h4>
+<form>
+    <fieldset id="fieldset">
+        <div class="business_name">
+        <p>
+            <label for="business_name">Business Name</label><br>
+            <input type="text" name="business_name" id="business_name">
+        </p>
+        </div>
+        <div class="license_type">
+        <p>
+            <label for="license_type">License Type</label><br>
+            <input type="text" name="license_type" id="license_type">
+        </p>
+        </div>
+        <div class="street_number">
+        <p>
+            <label for="street_number">Street Number</label><br>
+            <input type="text" name="street_number" id="street_number">
+        </p>
+        </div>
+        <div class="street_name">
+        <p>
+            <label for="street_name">Street Name</label><br>
+            <input type="text" name="street_name" id="street_name">
+        </p>
+        </div>
+        <div class="unit">
+        <p>
+            <label for="unit">Unit</label><br>
+            <input type="text" name="unit" id="unit">
+        </p>
+        </div>
+        <div class="city">
+        <p>
+            <label for="city">City/Village</label><br>
+            <input type="text" name="city" id="city">
+        </p>
+        </div>
+        <div class="applicant_name">
+        <p>
+            <label for="applicant_name">Owner/Applicant Name</label><br>
+            <input type="text" name="applicant_name" id="applicant_name">
+        </p>
+        </div>
+        <div class="application">
+        <p>
+            <label for="application">Application#</label><br>
+            <input type="text" name="application" id="application">
+        </p>
+        </div>
+    </fieldset>
+    <fieldset class="fieldset1">
+        <div class="add-new-business">
+            <a href="#"><button class="new_business" mat-button>Add Business License</button></a>
+        </div>
+            <button mat-button class="search">Search</button>
+            <button mat-button class="clear">Clear</button>
+    </fieldset>
+    <br>
+    <br>
+    <div class="fieldset2">
+        <fieldset>
+            <h4>360 Property View</h4>
+            <div class="business-views">
+            <ul>
+                <li class="permits"><a href="#">Permits</a></li>
+                <hr>
+                <li><a href="#">Service Requests</a></li>
+                <hr>
+                <li><a href="#">Inspections</a></li>
+                <hr>
+                <li><a href="#">Violations</a></li>
+            </ul>
+            </div>
+        </fieldset>
+    </div>
+</form>

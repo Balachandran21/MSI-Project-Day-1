@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -80,6 +80,21 @@ import { SetupBusinessWorkComponent } from './setup-business-work/setup-business
 import { SetupDataComponent } from './setup-data/setup-data.component';
 import { ReportAuditComponent } from './report-audit/report-audit.component';
 import { ReportReportAdminComponent } from './report-report-admin/report-report-admin.component'
+import * as forms from '@angular/forms';
+import { MaterialModule } from './material/material.module';
+import { ApiService } from './shared/api.service';
+import { SearchComponent } from './search/search.component';
+// import { MatHeaderRow, MatRow, MatTableDataSource,MatTableModule } from '@angular/material/table';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule} from '@angular/material/card';
+import { RouterModule,Routes } from '@angular/router';
+import { FilterPipe } from './pipes/filter.pipe';
+import { SortPipe } from './pipes/sort.pipe';
+import { MatPaginatorModule } from '@angular/material/paginator'
+import { FormsModule } from '@angular/forms';
+import { MatSortHeader, MatSortModule } from '@angular/material/sort';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { MatTable, MatTableDataSource, MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -97,7 +112,7 @@ import { ReportReportAdminComponent } from './report-report-admin/report-report-
     PropertyNewServiceComponent,
     PropertyNewInspectionServiceComponent,
     PropertyNewInspectionRealComponent,
-    PropertyNewInspectionRentalComponent,
+    PropertyNewInspectionGeneralComponent,
     PropertyNewInspectionGeneralComponent,
     PropertyNewBusinessComponent,
     VehicleSearchStickerComponent,
@@ -155,18 +170,32 @@ import { ReportReportAdminComponent } from './report-report-admin/report-report-
     SetupBusinessWorkComponent,
     SetupDataComponent,
     ReportAuditComponent,
-    ReportReportAdminComponent
+    ReportReportAdminComponent,
+    SearchComponent,
+    FilterPipe,
+    SortPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     MattesonModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    forms.ReactiveFormsModule,
+    MaterialModule,
+    MatGridListModule,
+    MatCardModule,
+    RouterModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTableModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
+  // schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }

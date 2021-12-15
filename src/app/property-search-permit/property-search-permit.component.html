@@ -1,1 +1,145 @@
-<p>property-search-permit works!</p>
+<h4 class="heading">Search Permit</h4>
+<form>
+    <fieldset id="fieldset">
+        <div class="permit">
+        <p>
+            <label for="permit">Permit#</label><br>
+            <input type="text" name="permit" id="permit">
+        </p>
+        </div>
+        <div class="permit_type">
+        <p>
+            <label for="permit_type">Permit Type</label><br>
+            <select name="permit_type" id="permit_type">
+                <option value=""></option>
+                <option value="DECK">DECK</option>
+                <option value="SHED">SHED</option>
+                <option value="NEW SINGLE FAMILY RESIDENTAL">NEW SINGLE FAMILY RESIDENTAL</option>
+                <option value="NEW MULTI FAMILY RESIDENTAL">NEW MULTI FAMILY RESIDENTAL</option>
+                <option value="NEW COMMERCIAL">NEW COMMERCIAL</option>
+                <option value="REMODEL RESIDENTAL">REMODEL RESIDENTAL</option>
+                <option value="REMODEL COMMERCIAL">REMODEL COMMERCIAL</option>
+                <option value="DEMOLITION">DEMOLITION</option>
+                <option value="GARAGE">GARAGE</option>
+                <option value="DRIVEWAY">DRIVEWAY</option>
+                <option value="ESI COMMERCIAL">ESI COMMERCIAL</option>
+                <option value="ESI RESIDENTAL">ESI RESIDENTAL</option>
+                <option value="BASKET BALL COURT">BASKET BALL COURT</option>
+                <option value="FENCE">FENCE</option>
+                <option value="GAZEBO">GAZEBO</option>
+                <option value="PATIO">PATIO</option>
+                <option value="SWIMMING POOL ABOVE GROUND">SWIMMING POOL ABOVE GROUND</option>
+                <option value="SWIMMING POOL INGROUND">SWIMMING POOL INGROUND</option>
+                <option value="TEAROFF/REROOF">TEAROFF/REROOF</option>
+                <option value="SIDDING/SOFFIT/FASCIA">SIDDING/SOFFIT/FASCIA</option>
+                <option value="WINDOWS">WINDOWS</option>
+                <option value="PATIO DOOR/GARAGE DOOR">PATIO DOOR/GARAGE DOOR</option>
+                <option value="CONCRETE SIDEWALK/APPROACH">CONCRETE SIDEWALK/APPROACH</option>
+                <option value="FURNACE/AC/GENERATOR">FURNACE/AC/GENERATOR</option>
+                <option value="CENTRAL AIR CONDITIONING">CENTRAL AIR CONDITIONING</option>
+                <option value="HOT WATER HEATER">HOT WATER HEATER</option>
+                <option value="LAWN SPRINKLING SYSTEM">LAWN SPRINKLING SYSTEM</option>
+                <option value="SEWER CLEAN OUT">SEWER CLEAN OUT</option>
+                <option value="SEWER REPAIR">SEWER REPAIR</option>
+                <option value="BRICK MAILBOX">BRICK MAILBOX</option>
+                <option value="PERGOLA">PERGOLA</option>
+                <option value="TUCKPOINTING">TUCKPOINTING</option>
+                <option value="INSPECTION SCHEDULING">INSPECTION SCHEDULING</option>
+                <option value="Global Type">Global Type</option>
+                <option value="GUTTERS">GUTTERS</option>
+                <option value="GARAGE DOOR">GARAGE DOOR</option>
+                <option value="ELECTRICAL SERVICE">ELECTRICAL SERVICE</option>
+                <option value="FIRE">FIRE</option>
+                <option value="ELECTRICAL">ELECTRICAL</option>
+                <option value="SIGN PERMIT">SIGN PERMIT</option>
+                <option value="PLUMBING">PLUMBING</option>
+                <option value="CODE ENFORCEMENT">CODE ENFORCEMENT</option>
+                <option value="ELEVATOR">ELEVATOR</option>
+                <option value="SOLAR PANELS">SOLAR PANELS</option>
+                <option value="UNDERGROUND UTILITY">UNDERGROUND UTILITY</option>
+                <option value="HEALTH">HEALTH</option>
+                <option value="REAL ESTATE SIGN">REAL ESTATE SIGN</option>
+                <option value="POOL">POOL</option>
+                <option value="CONCRETE/TUCKPOINTING">CONCRETE/TUCKPOINTING</option>
+                <option value="CONSTRUCTION TRAILER">CONSTRUCTION TRAILER</option>
+                <option value="WATER METER">WATER METER</option>
+                <option value="SPECIAL USE PERMIT">SPECIAL USE PERMIT</option>
+                <option value="UTILITY">UTILITY</option>
+                <option value="WIRELESS FACILITIES">WIRELESS FACILITIES</option>
+                <option value="PLAT OF SURVEY">PLAT OF SURVEY</option>
+                <option value="demo|permit">demo|permit</option>
+                <option value="Jyoti Test">Jyoti Test</option>
+                <option value="HOT WATER HEATER 1">HOT WATER HEATER 1</option>
+                <option value="Rain Water Harvesting 1">Rain Water Harvesting 1</option>
+                <option value="Testing">Testing</option>
+                <option value="Rain Water Collecting">Rain Water Collecting</option>
+                <option value="YES">YES</option>
+                <option value="Restaurant">Restaurant</option>
+            </select>
+        </p>
+        </div>
+        <div class="permit">
+            <p>
+                <label for="permit">Permit#</label><br>
+                <input type="text" name="permit" id="permit">
+            </p>
+        </div>
+        <div class="street_number">
+        <p>
+            <label for="street_number">Street Number</label><br>
+            <input type="text" name="street_number" id="street_number">
+        </p>
+        </div>
+        <div class="street_name">
+        <p>
+            <label for="street_name">Street Name</label><br>
+            <input type="text" name="street_name" id="street_name">
+        </p>
+        </div>
+        <div class="unit">
+        <p>
+            <label for="unit">Unit/Apt</label><br>
+            <input type="text" name="unit" id="unit">
+        </p>
+        </div>
+        <div class="city">
+        <p>
+            <label for="city">City/Village</label><br>
+            <input type="text" name="city" id="city" value="Matteson">
+        </p>
+        </div>
+        <div class="status">
+        <p>
+            <label for="status">Status</label><br>
+            <input type="text" name="status" id="status">
+        </p>
+        </div>
+    </fieldset>
+    <fieldset class="fieldset1">
+        <div class="add-new-permit">
+            <a href="#"><button class="new_permit" mat-button>Add New Permit</button></a>
+        </div>
+            <button mat-button class="search">Search</button>
+            <button mat-button class="clear">Clear</button>
+    </fieldset>
+    <br>
+    <div class="fieldset2">
+    <fieldset>
+        <h4>360 Property View</h4>
+        <div class="service-views">
+        <ul>
+            <li class="service"><a href="#">Service Requests</a></li>
+            <hr>
+            <li><a href="#">Inspections</a></li>
+            <hr>
+            <li><a href="#">Violations</a></li>
+            <hr>
+            <li><a href="#">Invoices</a></li>
+            <hr>
+            <li><a href="#">Business Licenses</a></li>
+        </ul>
+        </div>
+    </fieldset>
+    </div>
+</form>
+

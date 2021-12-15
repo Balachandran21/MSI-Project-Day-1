@@ -1,11 +1,11 @@
 .mat-toolbar
 {
     background-color:  navy;
+    height: auto;
 }
 .atteson
 {
-    background-color: black;
-    height: 100px;
+    height: auto;
     font-size: small;
 }
 .atteson:hover
@@ -910,4 +910,8 @@
 {
     float: right;
     color: lightgreen;
+}
+.alignment
+{
+    font-size: medium;
 }
