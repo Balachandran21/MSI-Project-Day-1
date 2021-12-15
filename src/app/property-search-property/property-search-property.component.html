@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <h4 class="heading1">Search Properties</h4>
+=======
+<h2 class="heading1">Search Properties</h2>
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 <form>
     <fieldset id="fieldset">
         <div class="owner_first_name">
@@ -46,7 +50,11 @@
         <div class="city"> 
             <p>
                 <label for="city">City/Village</label><br>
+<<<<<<< HEAD
                 <input type="text" [(ngModel)]='city' name="city" id="city" value="Matteson">
+=======
+                <input type="text" [(ngModel)]='city' name="city" id="city">
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
             </p>
         </div>
     </fieldset>
@@ -57,7 +65,11 @@
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-success" (click)="onSearch()">Search</button>
+<<<<<<< HEAD
         <button type="button" class="btn btn-primary">Clear</button>
+=======
+        <button type="button" class="btn btn-primary" (click)="onClear()">Clear</button>
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
     </div>
 </fieldset>
 <br>
@@ -65,7 +77,11 @@
 <div class="fieldset3">
     <div class="property">
     <fieldset>
+<<<<<<< HEAD
         <h4>360 Property View</h4>
+=======
+        <h2 id="res">360 Property View</h2>
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
         <div class="property-views">
             <ul>
                 <li class="permits"><a href="#">Permits</a></li>
@@ -85,6 +101,7 @@
     </div>
     </div>
 <div class="fieldset2">
+<<<<<<< HEAD
     <h4 class="result">Search Results</h4>
     <div class="scrollbar">
         <table class="table" id="scrollbar" border="5">
@@ -99,6 +116,22 @@
             <tbody>
                 <tr *ngFor="let element of OwnerData|filter:'SOUTH HOLLAND':'city'">
                     <td>{{element.address}}</td>
+=======
+    <h4 class="result" id="bala-"><b>Search Results</b></h4>
+    <div class="scrollbar">
+        <table class="table" id="scrollbar" border="5" aria-rowspan="20">
+            <thead>
+                <tr class="heading" id="heading">
+                    <th>Address</th>
+                    <th>Unit</th>
+                    <th>City</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="table-cells" *ngFor="let element of OwnerData|filter:SearchAddress:'address'|filter:SearchUnit:'unit'|filter:SearchCity:'city'|filter:SearchName:'name'">
+                    <td>{{element.address}} </td>
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
                     <td>{{element.unit}}</td>
                     <td>{{element.city}}</td>
                     <td>{{element.name}}</td>

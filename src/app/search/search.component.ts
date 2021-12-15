@@ -12,6 +12,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
   }
+<<<<<<< HEAD
   onSearch(){
     // this.service.postSearch().subscribe(
     // ()=>{
@@ -23,4 +24,17 @@ export class SearchComponent implements OnInit {
     // );
     // 
   }
+=======
+  //onSearch(){
+  //  this.service.postSearch().subscribe(
+  //   ()=>{
+  //   console.log("Displaying results");
+  //   },
+  //   (err: any)=>{
+  //   console.log(err);
+  //   }
+  //   );
+     
+  //}
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 }

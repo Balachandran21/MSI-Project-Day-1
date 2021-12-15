@@ -60,7 +60,10 @@
 {
     background-color: blue;
     color: white;
+<<<<<<< HEAD
     height: min-content;
+=======
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
     margin-top: 20px;
     margin-left: 40px;
     float: left;
@@ -85,11 +88,21 @@
 
 table tr th
 {
+<<<<<<< HEAD
     background-color: cadetblue;
     width: 40%;
     padding-left: 40px;
     padding-right: 35px;
     border: 1px solid black;
+=======
+    background-color: navy;
+    width: 20%;
+    padding-left: 40px;
+    padding-right: 35px;
+    border: 1px solid black;
+    position: sticky;
+    top: 0;
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 }
 .table_data
 {
@@ -102,7 +115,11 @@ table tr th
     width: 70%;
     float: left;
     margin-left: 200px;
+<<<<<<< HEAD
     margin-bottom: 30px;
+=======
+    margin-bottom: 70px;
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
     margin-top: -100px;
     float: left;
 }
@@ -117,8 +134,13 @@ table tr th
 .property-views
 {
     border: 1px solid black;
+<<<<<<< HEAD
     background-color: lightslategrey;
     width: 100%;
+=======
+    background-color: lightgrey;
+    width: 90%;
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 }
 ul li 
 {
@@ -167,6 +189,11 @@ hr
 .scrollbar
 {
     overflow-y: scroll;
+<<<<<<< HEAD
+=======
+    height: 400px;
+    border: 1px solid black;
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 }
 .result
 {
@@ -178,10 +205,14 @@ hr
     position: static;
 }
 
+<<<<<<< HEAD
 .table th
 {
     position: sticky;
 }
+=======
+
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 .fieldset3
 {
     margin-top: 88px;
@@ -191,3 +222,33 @@ hr
     width: 40%;
     margin-right: 70px;
 }
+<<<<<<< HEAD
+=======
+.result
+{
+    font-size: 30px;
+}
+.table
+{
+    text-align: center;
+    color: black;
+    margin-left: auto;
+    padding: auto;
+    height: 400px;
+    width: 100%;
+}
+/* .table th
+{
+    position: sticky;
+    top: 0;
+} */
+.table
+{
+    width: 100%;
+}
+.table-cells
+{
+    border: 1px solid black;
+    width: 100%;
+}
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c

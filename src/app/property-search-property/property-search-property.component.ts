@@ -27,6 +27,29 @@ export class PropertySearchPropertyComponent implements OnInit {
   unit='';
   address='';
   name='';
+<<<<<<< HEAD
+=======
+  SearchCity: any;
+  SearchAddress: any;
+  SearchUnit: any;
+  SearchName: any;
+  SortAddress:any;
+  PermitArray: any;
+  ServiceArray: any;
+  InspectionArray: any;
+  ViolationsArray: any;
+  InvoicesArray: any;
+  BusinessArray: any;
+  permit='';
+  servicea='';
+  inspections='';
+  violations='';
+  invoices='';
+  business='';
+
+
+ 
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 
   constructor(private formbuilder: FormBuilder, private api: ApiService, private search: SearchService) { }
 
@@ -67,6 +90,7 @@ export class PropertySearchPropertyComponent implements OnInit {
         })
   }
   getAllOwner() {
+<<<<<<< HEAD
     // this.api.getOwner()
     //   .subscribe((res: any) => {
     //     this.OwnerData = res;
@@ -97,6 +121,54 @@ export class PropertySearchPropertyComponent implements OnInit {
         console.log(res.results.result[0].json.results);
         this. OwnerData = res.results.result[0].json.results;
       },
+=======
+    this.api.getOwner()
+     .subscribe((res: any) => {
+         this.OwnerData = res;
+       })
+
+  }
+  onSearch() {
+    this.SearchCity=this.city;
+    this.SearchAddress=this.address;
+    this.SearchUnit=this.unit;
+    this.SearchName=this.name;
+    this.PermitArray=this.permit;
+    this.ServiceArray=this.service;
+    this.InspectionArray=this.inspections;
+    this.BusinessArray=this.business;
+    this.InvoicesArray=this.invoices;
+    this.ViolationsArray=this.violations;
+  
+    var a = {
+      
+      "request": [
+        {
+            "url": "api/propertyquicksearch",
+            "action": "post",
+            "propertyquicksearch": {
+                "customer": {
+                    "useremail": "msi@southholland.org",
+                    "screenname": "search",
+                    "customerid": "217"
+                },
+                "customerid": "217",
+                "streetnumber": "111",
+                "city": "South Holland"
+            }
+        }
+    ]
+        }
+    console.log("Working");
+    debugger
+    this.search.postSearch(a).subscribe(
+      (res:any) => {
+      
+        console.log(res.results.result[0].json.results);
+        this. OwnerData = res.results.result[0].json.results;
+      },
+  
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
       (err: any) => {
         console.log(err);
       }
@@ -105,6 +177,7 @@ export class PropertySearchPropertyComponent implements OnInit {
   }
 
   onSortDirection(){
+<<<<<<< HEAD
     if(this.SortDirection==='desc'){
       this.SortDirection='asc';
     }else{
@@ -112,8 +185,33 @@ export class PropertySearchPropertyComponent implements OnInit {
     }
   }  
   
+=======
+    // this.SortAddress=this.address;
+    // if(this.SortDirection=='desc'){
+    //   this.SortDirection='asc';
+    // }else{
+    //   this.SortDirection='desc';
+    // }
+  }  
+
+  
+  
+  onClear(){
+    this.SearchCity='';
+    this.city='';
+    this.SearchAddress='';
+    this.address='';
+    this.SearchUnit='';
+    this.unit='';
+    this.SearchName='';
+    this.name='';
+  }
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 }
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
