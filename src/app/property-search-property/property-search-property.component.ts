@@ -31,11 +31,16 @@ export class PropertySearchPropertyComponent implements OnInit {
   unit='';
   address='';
   name='';
+<<<<<<< HEAD
   ownerfirstname='';
   ownerlastname='';
   pin='';
   streetname='';
   streetnumber='';
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> b353fb13a4538ffa0dcdb009564344f9733edc88
   SearchCity: any;
   SearchAddress: any;
   SearchUnit: any;
@@ -55,8 +60,13 @@ export class PropertySearchPropertyComponent implements OnInit {
   Searchviolations='';
 
 
+<<<<<<< HEAD
   sortBy:string="";
   sortOrder:string="ASC";
+=======
+ 
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
+>>>>>>> b353fb13a4538ffa0dcdb009564344f9733edc88
 
   constructor(private formbuilder: FormBuilder, private api: ApiService, private search: SearchService) { }
 
@@ -108,6 +118,38 @@ export class PropertySearchPropertyComponent implements OnInit {
         })
   }
   getAllOwner() {
+<<<<<<< HEAD
+    // this.api.getOwner()
+    //   .subscribe((res: any) => {
+    //     this.OwnerData = res;
+    //   })
+
+  }
+  onSearch() {
+    var a = {
+      "request": [
+        {
+          "url": "api/propertyquicksearch",
+          "action": "post",
+          "propertyquicksearch": {
+            "customer": {
+              "useremail": "msi@southholland.org",
+              "screenname": "search",
+              "customerid": "217"
+            },
+            "customerid": "217",
+            "streetnumber": "111",
+            "city": "South Holland"
+          }
+        }
+      ]}
+    console.log("Working");
+    this.search.postSearch(a).subscribe(
+      (res:any) => {
+        console.log(res.results.result[0].json.results);
+        this. OwnerData = res.results.result[0].json.results;
+      },
+=======
     this.api.getOwner()
      .subscribe((res: any) => {
          this.OwnerData = res;
@@ -156,6 +198,7 @@ export class PropertySearchPropertyComponent implements OnInit {
         this.OwnerData = res.results.result[0].json.results;
       },
   
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
       (err: any) => {
         console.log(err);
       }
@@ -165,6 +208,15 @@ export class PropertySearchPropertyComponent implements OnInit {
   
 
   onSortDirection(){
+<<<<<<< HEAD
+    if(this.SortDirection==='desc'){
+      this.SortDirection='asc';
+    }else{
+      this.SortDirection='desc';
+    }
+  }  
+  
+=======
     // this.SortAddress=this.address;
     // if(this.SortDirection=='desc'){
     //   this.SortDirection='asc';
@@ -202,5 +254,17 @@ export class PropertySearchPropertyComponent implements OnInit {
     this.SearchbuisnessLiecence;
     this.businessLicenses;
   }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
+}
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
+>>>>>>> b353fb13a4538ffa0dcdb009564344f9733edc88

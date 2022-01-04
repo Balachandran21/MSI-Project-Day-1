@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<h4 class="heading1">Search Properties</h4>
+=======
 <h2 class="heading1">Search Properties</h2>
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
 <form>
     <fieldset id="fieldset">
         <div class="owner_first_name">
@@ -46,7 +50,11 @@
         <div class="city"> 
             <p>
                 <label for="city">City/Village</label><br>
+<<<<<<< HEAD
+                <input type="text" [(ngModel)]='city' name="city" id="city" value="Matteson">
+=======
                 <input type="text" [(ngModel)]='city' name="city" id="city">
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
             </p>
         </div>
     </fieldset>
@@ -55,11 +63,20 @@
     <div class="add-new-property">
         <a routerLink="/property-new-property" routerLinkActive="active">Add New Property</a>
     </div>
+<<<<<<< HEAD
     <div class="search">
         <button type="button" class="btn btn-success" [(ngModel)]="searchText" (click)="onSearch()">Search</button>
     </div>
     <div class="clear">
+=======
+    <div class="modal-footer">
+        <button type="button" class="btn btn-success" (click)="onSearch()">Search</button>
+<<<<<<< HEAD
+        <button type="button" class="btn btn-primary">Clear</button>
+=======
+>>>>>>> b353fb13a4538ffa0dcdb009564344f9733edc88
         <button type="button" class="btn btn-primary" (click)="onClear()">Clear</button>
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
     </div>
 </fieldset>
 <br>
@@ -67,7 +84,11 @@
 <div class="fieldset3">
     <div class="property">
     <fieldset>
+<<<<<<< HEAD
+        <h4>360 Property View</h4>
+=======
         <h2 id="res">360 Property View</h2>
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
         <div class="property-views">
             <ul let PropertyData>
                 <li class="permits"><a href="#">Permits <button type="button" class="btn btn-secondary btn-sm rounded" id="button1">{{PropertyData.permits}}</button></a></li>
@@ -87,6 +108,22 @@
     </div>
     </div>
 <div class="fieldset2">
+<<<<<<< HEAD
+    <h4 class="result">Search Results</h4>
+    <div class="scrollbar">
+        <table class="table" id="scrollbar" border="5">
+            <thead>
+                <tr class="heading" id="heading">
+                    <th><input type="button" value="Address" (click)="onSortDirection()"></th>
+                    <th><input type="button" value="Unit" (click)="onSortDirection()"></th> 
+                    <th><input type="button" value="City" (click)="onSortDirection()"></th>
+                    <th><input type="button" value="Name" (click)="onSortDirection()"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let element of OwnerData|filter:'SOUTH HOLLAND':'city'">
+                    <td>{{element.address}}</td>
+=======
     <h4 class="result" id="bala-"><b>Search Results</b></h4>
     <div class="scrollbar">
         <table class="table" id="scrollbar" border="5"  aria-rowspan="20">
@@ -121,6 +158,7 @@
             <tbody>
                 <tr class="table-cells" *ngFor="let element of OwnerData|filter:searchText|sort:sortBy:sortOrder">
                     <td>{{element.address}} </td>
+>>>>>>> d65544417ae1634698785b71aef1783356b8d70c
                     <td>{{element.unit}}</td>
                     <td>{{element.city}}</td>
                     <td>{{element.name}}</td>
