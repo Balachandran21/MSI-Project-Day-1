@@ -92,9 +92,12 @@ import { FilterPipe } from './pipes/filter.pipe';
 import { SortPipe } from './pipes/sort.pipe';
 import { MatPaginatorModule } from '@angular/material/paginator'
 import { FormsModule } from '@angular/forms';
-import { MatSortHeader, MatSortModule } from '@angular/material/sort';
-import { analyzeAndValidateNgModules } from '@angular/compiler';
-import { MatTable, MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { SearchfPipe } from './searchf.pipe';
+
 
 @NgModule({
   declarations: [
@@ -173,7 +176,8 @@ import { MatTable, MatTableDataSource, MatTableModule } from '@angular/material/
     ReportReportAdminComponent,
     SearchComponent,
     FilterPipe,
-    SortPipe
+    SortPipe,
+    SearchfPipe
   ],
   imports: [
     BrowserModule,
@@ -192,7 +196,9 @@ import { MatTable, MatTableDataSource, MatTableModule } from '@angular/material/
     RouterModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatAutocompleteModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

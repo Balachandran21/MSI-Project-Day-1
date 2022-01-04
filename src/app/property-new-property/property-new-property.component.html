@@ -1,10 +1,22 @@
-<h4 class="heading">Property Address</h4>
+<a routerLink="/property-search-property" routerLinkActive="active" class="button1"><strong><-</strong> Back To Property Search</a>
+<br>
+<h4 class="heading"><b>Property Address</b></h4>
 <form>
     <fieldset id="fieldset">
         <div class="address">
         <p>
-            <label for="address">Address</label><br>
-            <input type="text" name="address" id="address">
+            <mat-form-field>
+                <mat-label>Address</mat-label>
+                <input  matInput type="text" [(ngModel)]="Address" [matAutocomplete]="auto" [formControl]="control" />
+                <button mat-button matSuffix mat-icon-button aria-label="clear" (click)="onSear()" >
+                    <mat-icon>close</mat-icon>
+                </button>
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let elements Of AddressData | async" [value]="elements.Street" [(ngModel)]="Address" (click)="onAddress()">
+                        {{elements.Street}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
         </p>
         </div>
         <div class="unit">
@@ -16,7 +28,7 @@
         <div class="city">
         <p>
             <label for="city">City</label><br>
-            <input type="text" name="city" id="city" value="Matteson">
+            <input type="text" name="city" id="city">
         </p>
         </div>
         <div class="state">
@@ -34,13 +46,24 @@
         <div class="zoning">
         <p>
             <label for="zoning">Zoning</label><br>
-            <input type="text" name="zoning" id="zoning">
+            <select name="zoning" id="zoning">
+                <option value=""></option>
+                <option value="Cherry Hill">Cherry Hill</option>
+                <option value="Shady Green">Shady Green</option>
+                <option value="Terrace View Acres">Terrace View Acres</option>
+            </select>
         </p>
         </div>
         <div class="property_type">
         <p>
             <label for="property_type">Property Type</label><br>
-            <input type="text" name="property_type" id="property_type">
+            <select name="property_Type" id="property_type">
+                <option value=""></option>
+                <option value="Commercial">Commercial</option>
+                <option value="Multi-Use">Multi-Use</option>
+                <option value="Residental">Residental</option>
+                <option value="Retail">Retail</option>
+            </select>
         </p>
         </div>
     </fieldset>
@@ -56,7 +79,7 @@
     <br>
     <div class="fieldset2">
         <fieldset>
-            <h4>360 Property View</h4>
+            <h4 class="heading1"><b>360 Property View</b></h4>
             <div class="property-views">
             <ul>
                 <li class="permits"><a href="#">Permits</a></li>
@@ -74,4 +97,5 @@
             </div>
         </fieldset>
     </div>
-</form>
+</form> 
+<router-outlet></router-outlet>

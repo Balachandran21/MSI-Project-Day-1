@@ -1,10 +1,11 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms'
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { ApiService } from '../shared/api.service';
 import { SearchService } from '../search.service';
-import { OwnerModel } from './property-search-property.model';
+import { OwnerModel, PropertyModel } from './property-search-property.model';
+import { jitOnlyGuardedExpression } from '@angular/compiler/src/render3/util';
 
 
 
@@ -16,9 +17,12 @@ import { OwnerModel } from './property-search-property.model';
 })
 export class PropertySearchPropertyComponent implements OnInit {
 
+  searchText:any;
   formValue!: FormGroup;
   OwnerModelObj: OwnerModel = new OwnerModel();
-  OwnerData:any = [{ address:""},{unit:""},{city:""},{name:""}];
+  OwnerData:any = [{address:""},{unit:""},{city:""},{name:""}];
+  PropertyModelObj: PropertyModel = new PropertyModel();
+  PropertyData:any=[{permits:""},{serviceRequest:""},{Inspections:""},{violation:""},{invioce:""},{buisnessLiecence:""}]
   abbc = "dsvsdv";
   service: any;
   SortDirection='asc';
@@ -27,26 +31,32 @@ export class PropertySearchPropertyComponent implements OnInit {
   unit='';
   address='';
   name='';
+  ownerfirstname='';
+  ownerlastname='';
+  pin='';
+  streetname='';
+  streetnumber='';
   SearchCity: any;
   SearchAddress: any;
   SearchUnit: any;
   SearchName: any;
   SortAddress:any;
-  PermitArray: any;
-  ServiceArray: any;
-  InspectionArray: any;
-  ViolationsArray: any;
-  InvoicesArray: any;
-  BusinessArray: any;
   permit='';
-  servicea='';
+  serviceRequest='';
+  businessLicenses='';
   inspections='';
-  violations='';
   invoices='';
-  business='';
+  violations='';
+  SearchserviceRequest='';
+  Searchpermits='';
+  SearchbuisnessLiecence='';
+  SearchInspections='';
+  Searchinvioce='';
+  Searchviolations='';
 
 
- 
+  sortBy:string="";
+  sortOrder:string="ASC";
 
   constructor(private formbuilder: FormBuilder, private api: ApiService, private search: SearchService) { }
 
@@ -58,7 +68,13 @@ export class PropertySearchPropertyComponent implements OnInit {
       StreetNumber: [''],
       PIN: [''],
       Unit: [''],
-      City: ['']
+      City: [''],
+      violations:[''],
+      businessLicenses:[''],
+      inspections:[''],
+      invoices:[''],
+      permit:[''],
+      serviceRequest:['']
     })
     this.getAllOwner();
     console.log(this.OwnerData);
@@ -73,7 +89,12 @@ export class PropertySearchPropertyComponent implements OnInit {
     this.OwnerModelObj.PIN = this.formValue.value.PIN;
     this.OwnerModelObj.Unit = this.formValue.value.Unit;
     this.OwnerModelObj.City = this.formValue.value.City;
-
+    this.PropertyModelObj.permits=this.formValue.value.permits;
+    this.PropertyModelObj.serviceRequest=this.formValue.value.serviceRequest;
+    this.PropertyModelObj.violation=this.formValue.value.violations;
+    this.PropertyModelObj.buisnessLiecence=this.formValue.value.buisnessLicenses;
+    this.PropertyModelObj.invioce=this.formValue.value.invoices;
+    this.PropertyModelObj.Inspections=this.formValue.value.inspections;
     
     
 
@@ -94,43 +115,45 @@ export class PropertySearchPropertyComponent implements OnInit {
 
   }
   onSearch() {
+    this.searchText=this.address||this.name||this.unit||this.city;
     this.SearchCity=this.city;
     this.SearchAddress=this.address;
     this.SearchUnit=this.unit;
     this.SearchName=this.name;
-    this.PermitArray=this.permit;
-    this.ServiceArray=this.service;
-    this.InspectionArray=this.inspections;
-    this.BusinessArray=this.business;
-    this.InvoicesArray=this.invoices;
-    this.ViolationsArray=this.violations;
-  
+    this.Searchpermits=this.permit;
+    this.SearchInspections=this.inspections;
+    this.SearchserviceRequest=this.serviceRequest;
+    this.Searchinvioce=this.invoices;
+    this.Searchviolations=this.violations;
+    this.SearchbuisnessLiecence=this.businessLicenses;
+
+
     var a = {
-      
       "request": [
-        {
-            "url": "api/propertyquicksearch",
-            "action": "post",
-            "propertyquicksearch": {
-                "customer": {
-                    "useremail": "msi@southholland.org",
-                    "screenname": "search",
-                    "customerid": "217"
-                },
-                "customerid": "217",
-                "streetnumber": "111",
-                "city": "South Holland"
-            }
-        }
-    ]
-        }
+      {
+      "url": "api/propertyquicksearch",
+      "action": "post",
+      "propertyquicksearch": {
+      "customer": {
+      "useremail": "msi@matteson.org",
+      "screenname": "search",
+      "customerid": "201"
+      },
+      "customerid": "201",
+      "streetnumber": "111",
+      "city": "Matteson"
+      }
+      }
+      ]
+      }
     console.log("Working");
     debugger
     this.search.postSearch(a).subscribe(
       (res:any) => {
-      
+        console.log(res.results.result[0]);
+        this.PropertyData=res.results.result[0];
         console.log(res.results.result[0].json.results);
-        this. OwnerData = res.results.result[0].json.results;
+        this.OwnerData = res.results.result[0].json.results;
       },
   
       (err: any) => {
@@ -139,6 +162,7 @@ export class PropertySearchPropertyComponent implements OnInit {
     );
 
   }
+  
 
   onSortDirection(){
     // this.SortAddress=this.address;
@@ -152,6 +176,11 @@ export class PropertySearchPropertyComponent implements OnInit {
   
   
   onClear(){
+    this.searchText='';
+    this.ownerfirstname='';
+    this.ownerlastname='';
+    this.pin='';
+    this.streetname='';
     this.SearchCity='';
     this.city='';
     this.SearchAddress='';
@@ -160,8 +189,18 @@ export class PropertySearchPropertyComponent implements OnInit {
     this.unit='';
     this.SearchName='';
     this.name='';
+    this.Searchpermits;
+    this.permit;
+    this.SearchserviceRequest;
+    this.serviceRequest;
+    this.SearchInspections;
+    this.inspections;
+    this.Searchviolations;
+    this.violations;
+    this.Searchinvioce;
+    this.invoices;
+    this.SearchbuisnessLiecence;
+    this.businessLicenses;
   }
+
 }
-
-
-

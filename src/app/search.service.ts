@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Search } from './search.model';
 
 @Injectable({
@@ -8,9 +9,21 @@ import { Search } from './search.model';
 export class SearchService {
 
   constructor(private http:HttpClient) { }
+  Addresses:any;
+  
   data:Search = new Search();
-  readonly baseUrl ="https://e3267334-e858-445e-b5c2-f4e161541418.mock.pstmn.io/searchProperty";
+  readonly baseUrl ="https://c493d84e-430f-4bbc-878c-ed7a810e209d.mock.pstmn.io";
 
 postSearch(a:any):any{
-  return this.http.post(this.baseUrl, a);
-}}
+  return this.http.post(this.baseUrl+'/searchProperty', a);
+}
+// getSearch():Observable<any[]>
+//   {
+//     return this.http.get<any>(this.baseUrl+'/searchAddress');
+//   }
+//   getAll()
+//     {
+//       return this.http.get<any>(this.baseUrl+'/searchAddress');
+//     }
+  
+  }

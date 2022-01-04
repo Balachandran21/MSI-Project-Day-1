@@ -5,52 +5,74 @@
     border: 1px black solid;
     margin-left: 70px;
 }
+.button1
+{
+    margin-left: 5px;
+    font-size: 18px;
+}
 .address
 {
+    margin-top: 20px;
+    margin-bottom: 30px;
     display: block;
     float: left;
-    margin-left: 10px;
+    margin-left: 70px;
+    width: 70%;
+    height: 60px;
+    text-align: center;
+    height: 60px;
+}
+.form-control
+{
+    height: 30px;
+    width: 100%;
+    width: 80px;
 }
 .unit
 {
     float: right;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .city
 {
     display: block;
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 .state
 {
     float: left;
-    margin-left: 60px; 
+    margin-left: 20px; 
 }
 #state
 {
-    width: 80px;
+    width: 165px;
+    margin-left: 50pxpx;
+
 }
 .zip
 {
     float: left;
-    margin-left: 20px;
+    margin-left: 90px;
     width: 5%;
 }
 #zip
 {
-    width: 90px;
+    width: 160px;
 }
 .zoning
 {
     display: block;
     float: left;
-    margin-left: 10px;
+    margin-left: -280px;
+    margin-top: 60px;
+    margin-bottom: 20px;
 }
 .property_type
 {
     float: right;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
 .new_property
 {
@@ -64,7 +86,7 @@
     background-color: blue;
     color: white;
     margin-top: 20px;
-    margin-left: 2px;
+    margin-left: 30px;
     float: left;
 }
 .clear
@@ -89,12 +111,14 @@
     width: 40%;
     border: 1px black solid;
     margin-left: 70px;
+    margin-top: 30px;
 }
 .fieldset2
 {
     width: 35%;
     float: right;
     margin-right: 70px;
+    margin-top: -543px;
 }
 ul li
 {
@@ -123,10 +147,29 @@ hr
 }
 .heading
 {
+    margin-top: 20px;
     margin-left: 70px;
+    font-size: 20px;
+}
+.heading1
+{
+    font-size: 20px;
 }
 .permits
 {
     margin-top: 14px;
 }
-
+#zoning
+{
+    width: 166px;
+    height: 25px;
+}
+#property_type
+{
+    width: 166px;
+    height: 25px;
+}
+.hand-icon
+{
+    cursor: pointer;
+}

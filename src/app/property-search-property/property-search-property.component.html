@@ -4,13 +4,13 @@
         <div class="owner_first_name">
             <p>
                 <label for="owner_first_name">Owner First Name</label><br>
-                <input type="text" name="owner_first_name" id="owner_first_name">
+                <input type="text" [(ngModel)]='ownerfirstname' name="owner_first_name" id="owner_first_name">
             </p>
         </div>
         <div class="owner_last_name">
             <p>
                 <label for="owner_last_name">Owner Last Name</label><br>
-                <input type="text" name="owner_last_name" id="owner_last_name">
+                <input type="text" [(ngModel)]='ownerlastname' name="owner_last_name" id="owner_last_name">
             </p>
         </div>
         <div class="owner_company_name">
@@ -22,7 +22,7 @@
         <div class="pin">
             <p>
                 <label for="pin">PIN</label><br>
-                <input type="text" name="pin" id="pin">
+                <input type="text" [(ngModel)]='pin' name="pin" id="pin">
             </p>
         </div>
         <div class="street_number">
@@ -34,7 +34,7 @@
         <div class="street_name">
             <p>
                 <label for="street_name">Street Name</label><br>
-                <input type="text" name="street_name" id="street_name">
+                <input type="text" [(ngModel)]='streetname' name="street_name" id="street_name">
             </p>
         </div>
         <div class="unit">
@@ -53,10 +53,12 @@
 </form>
 <fieldset class="fieldset1">
     <div class="add-new-property">
-        <a href="#"><button class="new_property" mat-button>Add New Property</button></a>
+        <a routerLink="/property-new-property" routerLinkActive="active">Add New Property</a>
     </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-success" (click)="onSearch()">Search</button>
+    <div class="search">
+        <button type="button" class="btn btn-success" [(ngModel)]="searchText" (click)="onSearch()">Search</button>
+    </div>
+    <div class="clear">
         <button type="button" class="btn btn-primary" (click)="onClear()">Clear</button>
     </div>
 </fieldset>
@@ -67,18 +69,18 @@
     <fieldset>
         <h2 id="res">360 Property View</h2>
         <div class="property-views">
-            <ul>
-                <li class="permits"><a href="#">Permits</a></li>
+            <ul let PropertyData>
+                <li class="permits"><a href="#">Permits <button type="button" class="btn btn-secondary btn-sm rounded" id="button1">{{PropertyData.permits}}</button></a></li>
                 <hr>
-                <li><a href="#">Service Requests</a></li>
+                <li><a href="#">Service Requests <button type="button" class="btn btn-secondary btn-sm rounded" id="button1">{{PropertyData.serviceRequest}}</button></a></li>
                 <hr>
-                <li><a href="#">Inspections</a></li>
+                <li><a href="#">Inspections <button type="button" class="btn btn-secondary btn-sm rounded" id="button1">{{PropertyData.inspections}}</button></a></li>
                 <hr>
-                <li><a href="#">Violations</a></li>
+                <li><a href="#">Violations <button type="button" class="btn btn-secondary btn-sm rounded" id="button1">{{PropertyData.voilations}}</button></a></li>
                 <hr>
-                <li><a href="#">Invoices</a></li>
+                <li><a href="#">Invoices <button type="button" class="btn btn-secondary btn-sm rounded" id="button1">{{PropertyData.invioces}}</button></a></li>
                 <hr>
-                <li><a href="#">Business Licenses</a></li>
+                <li><a href="#">Business Licenses <button type="button" class="btn btn-secondary btn-sm rounded" id="button1">{{PropertyData.businessLicenses}}</button></a></li>
             </ul>
         </div>
     </fieldset>
@@ -87,17 +89,37 @@
 <div class="fieldset2">
     <h4 class="result" id="bala-"><b>Search Results</b></h4>
     <div class="scrollbar">
-        <table class="table" id="scrollbar" border="5" aria-rowspan="20">
+        <table class="table" id="scrollbar" border="5"  aria-rowspan="20">
             <thead>
-                <tr class="heading" id="heading">
-                    <th>Address</th>
-                    <th>Unit</th>
-                    <th>City</th>
-                    <th>Name</th>
+                <tr>
+                    <th>
+                    Address 
+                    <i class="fa fa-sort hand-icon" *ngIf="sortBy!='address'" (click)="sortBy='address';sortOrder='ASC'"></i>
+                    <i class="fa fa-sort-up hand-icon text-primary" *ngIf="sortBy=='address'" (click)="sortBy='address' && sortOrder='ASC'" (click)="sortOrder='DESC'"></i>
+                    <i class="fa fa-sort-down hand-icon text-primary" *ngIf="sortBy=='address'" (click)="sortBy='address' && sortOrder='DESC'" (click)="sortOrder='ASC'"></i>
+                    </th>
+                    <th>
+                    Unit 
+                    <i class="fa fa-sort hand-icon" *ngIf="sortBy!='unit'" (click)="sortBy='unit';sortOrder='ASC'"></i>
+                    <i class="fa fa-sort-up hand-icon text-primary" *ngIf="sortBy=='unit'" (click)="sortBy='address' && sortOrder='ASC'" (click)="sortOrder='DESC'"></i>
+                    <i class="fa fa-sort-down hand-icon text-primary" *ngIf="sortBy=='unit'" (click)="sortBy='address' && sortOrder='DESC'" (click)="sortOrder='ASC'"></i>
+                    </th>
+                    <th>
+                    City
+                    <i class="fa fa-sort hand-icon" *ngIf="sortBy!='city'" (click)="sortBy='city';sortOrder='ASC'"></i>
+                    <i class="fa fa-sort-up hand-icon text-primary" *ngIf="sortBy=='city'" (click)="sortBy='address' && sortOrder='ASC'" (click)="sortOrder='DESC'"></i>
+                    <i class="fa fa-sort-down hand-icon text-primary" *ngIf="sortBy=='city'" (click)="sortBy='address'&& sortOrder='DESC'" (click)="sortOrder='ASC'"></i>
+                    </th>
+                    <th>
+                    Name 
+                    <i class="fa fa-sort hand-icon" *ngIf="sortBy!='name'" (click)="sortBy='name';sortOrder='ASC'"></i>
+                    <i class="fa fa-sort-up hand-icon text-primary" *ngIf="sortBy=='name'" (click)="sortBy='name' && sortOrder='ASC'" (click)="sortOrder='DESC'"></i>
+                    <i class="fa fa-sort-down hand-icon text-primary" *ngIf="sortBy=='name'" (click)="sortBy='name' && sortOrder='DESC'" (click)="sortOrder='ASC'"></i>
+                    </th>
                 </tr>
             </thead>
             <tbody>
-                <tr class="table-cells" *ngFor="let element of OwnerData|filter:SearchAddress:'address'|filter:SearchUnit:'unit'|filter:SearchCity:'city'|filter:SearchName:'name'">
+                <tr class="table-cells" *ngFor="let element of OwnerData|filter:searchText|sort:sortBy:sortOrder">
                     <td>{{element.address}} </td>
                     <td>{{element.unit}}</td>
                     <td>{{element.city}}</td>
@@ -105,9 +127,7 @@
                 </tr>
            </tbody>
         </table>
-    </div>
+</div>
+    
+<router-outlet></router-outlet>
 
-
-    <!-- <mat-paginator [pageSizeOptions]="[5,10,15,20,25,30,35,40,45]" showFirstLastButtons></mat-paginator>    -->
-
-<!-- <a href="#" routerLink="testing" routerLinkActive="active">Testing</a> -->
